@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #755edb;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+}
+
+.form-box, .tabel-box, .summary-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #71a6db;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #07367c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.delete {
+    background: #d32f2f;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* STRUK HANYA MUNCUL SAAT PRINT */
+#struk {
+    display: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #struk, #struk * {
+        display: block;
+        visibility: visible;
+    }
+    #struk {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 20px;
+    }
+}
